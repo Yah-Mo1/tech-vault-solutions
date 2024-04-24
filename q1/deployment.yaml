@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cache-db
+  namespace: cyberco
+  labels:
+    app: cache-db
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cache-db
+  template:
+    metadata:
+      labels:
+        app: cache-db
+    spec:
+      containers:
+        - name: redis
+          image: redis:buster
+          ports:
+            - containerPort: 6379
