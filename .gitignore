@@ -1,6 +1,6 @@
 # Local .terraform directories
 **/.terraform/*
-
+.terraform.lock.hcl*
 # .tfstate files
 *.tfstate
 *.tfstate.*
@@ -37,3 +37,4 @@ terraform.rc
 node_modules
 
 *.env
+*.backup.tar.gz
